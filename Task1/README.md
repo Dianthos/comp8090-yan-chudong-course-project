@@ -1,23 +1,48 @@
-# Task 1 – Simple Data Processing & Summary Tool
+# Task 1 - Student Assignment Manager
 
-## 📘 Overview
-This task delivers a **minimal yet practical data processing tool** that reads a CSV file and prints a concise summary, including:
-- Row/column counts
-- Missing value counts per column
-- Descriptive statistics for numeric columns
-- Top-N word frequencies for text columns (optional)
+## Overview
+This folder contains **Task 1** of the COMP8090SEF individual course project.
 
-This is the **preliminary submission** demonstrating repository setup, initial code, and documentation. More features will be added in later milestones (e.g., charts, export to Markdown/HTML, CLI options).
+The project is a Python command-line application called **Student Assignment Manager**.  
+It is designed to help students manage academic tasks such as assignments, exams, and general study tasks in a clear and structured way.
 
----
+This task focuses on applying **object-oriented programming** and **modular programming** to solve a real-life problem.
 
-## ✨ Features (Preliminary)
-- Load a CSV file from path
-- Print table shape (rows, columns)
-- Show missing values per column
-- Numeric columns: count, mean, std, min, max
-- Text columns (optional): top-N word frequencies (basic tokenization)
+## Main Features
+- Add a new task
+- View all tasks
+- Search tasks by keyword
+- Filter tasks by course
+- Sort tasks by due date
+- Toggle completion status
+- Delete a task
+- Save task data to a file
 
----
+## OOP Design
+The system uses the following object-oriented structure:
 
-## 🗂️ Structure
+- **Task**: base class
+- **AssignmentTask**: subclass for assignment-related tasks
+- **ExamTask**: subclass for exam-related tasks
+- **GeneralTask**: subclass for general study tasks
+- **TaskManager**: manages all tasks
+- **Storage module**: handles saving and loading data
+
+This design demonstrates:
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Modular programming
+
+## File Structure
+- `main.py` - main program and command-line interface
+- `models.py` - task classes
+- `manager.py` - task management logic
+- `storage.py` - file storage logic
+- `USER_GUIDE.md` - user guide
+
+## How to Run
+Open a terminal in the project root directory and run:
+
+```bash
+python -m task1.main
